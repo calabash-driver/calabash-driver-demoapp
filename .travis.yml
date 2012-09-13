@@ -11,6 +11,8 @@ before_install:
   # only update the sdk for the tools and platform-tools (1,2) and whatever api level
   # you are building for android (run "android list sdk" to get the full list.  9 = 2.3.3 or API level 10
   - android update sdk --filter 1,9,42 --no-ui --force
+  - ls -la /home/travis/builds/calabash-driver/calabash-driver-demoapp/android-sdk-linux/add-ons
+  - ls -la /home/travis/builds/calabash-driver/calabash-driver-demoapp/android-sdk-linux/platforms
   - echo no | android create avd -n emulator10DE -t android-10 --skin WVGA800 --force
   - gem install calabash-android
 before_script:
