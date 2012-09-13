@@ -23,5 +23,9 @@ before_script:
   - sleep 15
 script:
   - mvn test
+  - adb kill-server
+  - adb start-server
   - adb devices
-  - calabash-android run target/calabash-driver-demoapp-1.0-SNAPSHOT.apk 
+  - calabash-android run target/calabash-driver-demoapp-1.0-SNAPSHOT.apk
+after_script:
+  - killall emulator-arm 
