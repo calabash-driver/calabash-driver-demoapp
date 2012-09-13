@@ -20,7 +20,7 @@ before_script:
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3 # give xvfb some time to start 
   - emulator -avd emulator10DE -prop persist.sys.language=de -prop persist.sys.country=DE -noaudio -no-boot-anim &
-  - sleep 15
+  - sleep 45
 script:
   - mvn test
   - adb kill-server
