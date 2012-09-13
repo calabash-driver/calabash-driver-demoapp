@@ -19,8 +19,9 @@ before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3 # give xvfb some time to start 
-  - emulator -avd emulator10DE -prop persist.sys.language=de -prop persist.sys.country=DE -noaudio -no-boot-anim  -cpu-delay 0 &
+  - emulator -avd emulator10DE -prop persist.sys.language=de -prop persist.sys.country=DE -noaudio -no-boot-anim &
   - sleep 15
 script:
   - mvn test
+  - adb devices
   - calabash-android run target/calabash-driver-demoapp-1.0-SNAPSHOT.apk 
