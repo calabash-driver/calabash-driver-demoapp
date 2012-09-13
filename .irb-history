@@ -1,0 +1,20 @@
+performAction('press','EN Button'
+performAction('press','EN Button')
+performAction('click','EN Button')
+performAction('assertText','EN Button',true)
+exit
+quit
+performAction('assertText','EN Button',true)
+performAction('click','EN Button')
+performAction('press','EN Button')
+performAction('assertText','This will end the activity',true)
+performAction('waitForText','This will end the activity',true)
+performAction('press','No, no')
+performAction('assertText','AndroidDemoProject',true)
+performAction('assertText','EN Button',true)
+performAction('assertText','CalabashAndroidDemo',true)
+performAction('assert_Text','CalabashAndroidDemo',true)
+performAction('assert_text','CalabashAndroidDemo',true)
+performAction('assert_text','This will end the activity',true)
+eit
+quit

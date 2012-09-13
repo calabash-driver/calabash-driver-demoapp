@@ -28,5 +28,3 @@ script:
   - adb devices
   - adb install -r target/calabash-driver-demoapp-1.0-SNAPSHOT.apk
   - calabash-android run target/calabash-driver-demoapp-1.0-SNAPSHOT.apk
-after_script:
-  - killall emulator-arm 
