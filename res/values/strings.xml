@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello Default Locale, AndroidDemoProject!</string>
+    <string name="button">EN Button</string>
+    <string name="app_name">CalabashAndroidDemo</string>
+</resources>
