@@ -5,14 +5,11 @@ before_install:
   - tar -zxf android-sdk_r20.0.3-linux.tgz
   # setup your ANDROID_HOME and PATH environment variables
   # use ~/builds/calabash-driver/calabash-driver-demoapp/android-sdk-linux
-  - mvn -version
   - export ANDROID_HOME=/home/travis/builds/calabash-driver/calabash-driver-demoapp/android-sdk-linux
   - export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
   # only update the sdk for the tools and platform-tools (1,2) and whatever api level
   # you are building for android (run "android list sdk" to get the full list.  9 = 2.3.3 or API level 10
   - android update sdk --filter 1,9,"addon-google_apis-google-10" --no-ui --force
-  - ls -la /home/travis/builds/calabash-driver/calabash-driver-demoapp/android-sdk-linux/add-ons
-  - ls -la /home/travis/builds/calabash-driver/calabash-driver-demoapp/android-sdk-linux/platforms
   - echo no | android create avd -n emulator10DE -t android-10 --skin WVGA800 --force
   - gem install calabash-android
 before_script:
@@ -22,7 +19,7 @@ before_script:
   - emulator -avd emulator10DE -prop persist.sys.language=de -prop persist.sys.country=DE -noaudio -no-boot-anim &
   - sleep 45
 script:
-  - mvn test
+  - mvn install
   - adb kill-server
   - adb start-server
   - adb devices
