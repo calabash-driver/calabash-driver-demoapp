@@ -1,6 +1,5 @@
 package sh.calabash.demoproject;
 
-import sh.calabash.R;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
