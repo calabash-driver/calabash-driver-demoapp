@@ -2,7 +2,7 @@
 <resources>
 
     <string name="hello">Hello Spain, AndroidDemoProject!</string>
-    <string name="button">ES Button</string>
+    <string name="button">Configuración</string>
     <string name="app_name">CalabashAndroidDemo</string>
 
 </resources>
